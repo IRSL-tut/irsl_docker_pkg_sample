@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="irsl_docker_pkg_sample"
+        type="sub_and_pub.py"
+        name="sub_and_pub" output="screen" />
+</launch>

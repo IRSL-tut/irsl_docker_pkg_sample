@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>irsl_docker_pkg_sample</name>
+  <version>0.0.0</version>
+  <description>Sample for docker-package</description>
+
+  <maintainer email="faculty@irsl.eiiris.tut.ac.jp"> IRSL at Toyohashi Tech </maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend condition="$IRSL_LOCAL_BUILD == 'true'">rospy</depend>
+  <!--
+  <depend>docker.io</depend>
+  <depend>python3-docker</depend>
+  -->
+  <export>
+    <build_type>catkin</build_type>
+  </export>
+</package>
