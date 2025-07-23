@@ -10,7 +10,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <depend condition="$IRSL_LOCAL_BUILD == 'true'">rospy</depend>
+  <depend condition="$IRSL_BUILD_LOCAL == 'true'">rospy</depend>
   <!--
   <depend>docker.io</depend>
   <depend>python3-docker</depend>
