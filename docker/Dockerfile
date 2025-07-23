@@ -26,6 +26,6 @@ RUN ( cd src; vcs import --recursive < ${IRSL_PROJECT}/dot.rosinstall )
 ## rosdep ...
 
 #### building a workspace
-RUN bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash && catkin config --install && IRSL_BUILD_LOCAL=true catkin build"
+RUN bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash && catkin config --install && VERBOSE=1 IRSL_BUILD_LOCAL=true catkin build"
 
 CMD [ "bash", "-c", "source ${IRSL_WS}/install/setup.bash && roslaunch ${IRSL_PROJECT} run.launch" ]
