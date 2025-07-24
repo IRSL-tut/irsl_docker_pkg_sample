@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(irsl_docker_pkg_sample)
 
-find_package(catkin REQUIRED COMPONENTS
-)
+find_package(catkin REQUIRED)
 
 message("build_local: $ENV{IRSL_BUILD_LOCAL}")
 if ("$ENV{IRSL_BUILD_LOCAL}")
@@ -12,6 +11,11 @@ else()
 endif()
 
 if ("$ENV{IRSL_BUILD_LOCAL}")
+### if you require some packages (but not needed for python)
+#find_package(catkin REQUIRED  COMPONENTS
+#  some_packages ...
+#)
+
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
